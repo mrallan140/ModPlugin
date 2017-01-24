@@ -15,7 +15,7 @@ public class Main extends JavaPlugin {
     
     public void onPlayerJoin(PlayerJoinEvent e) {
        e.getJoinMessage();
-       
+       e.getPlayer().sendMessage("MDR BIENVNUE");
     }
     
             
