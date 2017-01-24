@@ -21,6 +21,7 @@ public class Main extends JavaPlugin {
     
     public void openGui(Player p){
     	p.getPlayer().sendMessage("LOL");
+    	p.getType().getClass();
     	
     }
 }
