@@ -1,5 +1,6 @@
 package fr.mrallan140.modplugin;
 
+import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -18,5 +19,9 @@ public class Main extends JavaPlugin {
        e.getPlayer().sendMessage("MDR BIENVNUE");
     }
     
-            
+    public void openGui(Player p){
+    	p.getPlayer().sendMessage("LOL");
+    	
+    	
+    }
 }
