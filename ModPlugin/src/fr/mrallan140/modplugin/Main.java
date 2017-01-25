@@ -6,9 +6,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin {
 
     public void onEnable(){
-        	
-    	PluginManager pm = getServer().getPluginManager();
-    	pm.registerEvents(new GuiMod(this), this);
+        getCommand("modgui").setExecutor(new Commands());	
+    	
     	
     	System.out.println("Plugin Moderation ON !");
         
