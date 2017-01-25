@@ -25,7 +25,7 @@
     </properties>
     
     <build>
-    <directory>${buildDirectory}</directory>
+    <directory>compiled/</directory>
         <sourceDirectory>src</sourceDirectory>
         <resources>
             <resource>
