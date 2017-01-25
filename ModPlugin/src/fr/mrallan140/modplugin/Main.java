@@ -1,6 +1,5 @@
 package fr.mrallan140.modplugin;
 
-import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {

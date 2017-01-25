@@ -25,6 +25,7 @@
     </properties>
     
     <build>
+    <directory>${buildDirectory}</directory>
         <sourceDirectory>src</sourceDirectory>
         <resources>
             <resource>
@@ -50,4 +51,7 @@
     </build>
     
     
+    <ciManagement>
+    	<system>GIT</system>
+    </ciManagement>
 </project>
