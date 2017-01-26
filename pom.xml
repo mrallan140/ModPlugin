@@ -25,12 +25,10 @@
     </properties>
     
     <build>
-    <directory>compiled/</directory>
         <sourceDirectory>src</sourceDirectory>
         <resources>
             <resource>
-                <filtering>true</filtering>
-                <directory>src</directory>
+                <directory>ModPlugin/src/</directory>
                 <includes>
                     <include>plugin.yml</include>
                 </includes>
@@ -49,9 +47,4 @@
             </plugin>
         </plugins>
     </build>
-    
-    
-    <ciManagement>
-    	<system>GIT</system>
-    </ciManagement>
 </project>

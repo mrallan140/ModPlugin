@@ -1,9 +1,8 @@
  name: ModerationPlugin
  version: 1.0.0
- description: plugin for Moderator
- main: fr.mrallan140.modplug.Main
+ main: fr.mrallan140.modplugin.Main
  commands:
   modgui:
-    description: Ouvre le menu du plugin.
-    usage: /modgui
-    permission: modplug.gui
+   description: Ouvre le menu du plugin.
+   usage: /modgui
+   permission: modplug.gui
