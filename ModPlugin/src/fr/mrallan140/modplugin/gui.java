@@ -1,6 +1,7 @@
 package fr.mrallan140.modplugin;
 
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
@@ -36,24 +37,18 @@ public class gui implements Listener {
 		//modif des ITEM META//
 		plainteM.addEnchant(Enchantment.DURABILITY, 2555, true);
 		visibiliteM.addEnchant(Enchantment.DURABILITY, 255, true);
-		
-		
-		inv.setItem(13, getItem(Material.CHEST, 1, (byte)14, "JE SUIS UN COFFRE", Enchantment.DURABILITY, 255, null));
-		inv.setItem(22, visibilite);
+		inv.setItem(13, getItem(Material.CHEST, 1, (byte)1, "JE SUIS UN COFFRE", Enchantment.DURABILITY, 255, Arrays.asList("Java", "Scala", "Groovy")));
+		inv.setItem(22, visibilite);	
 		p.openInventory(inv);
 	}
 
-	private static ItemStack getItem(Material material, int montant, byte data, String DisplayName, Enchantment enchant, int level, ArrayList<String> Lore) {
+	private static ItemStack getItem(Material material, int montant,byte data, String DisplayName, Enchantment enchant, int level, List<String> lore) {
 		ItemStack i = new ItemStack(material, montant, data);
 		ItemMeta iM = i.getItemMeta();
 		iM.setDisplayName(DisplayName);
-		if (enchant != null) {
-			iM.addEnchant(enchant, level, true);
-		}
-		if (Lore != null) {
-			iM.setLore(Lore);
-		}
+		iM.addEnchant(enchant, level, true);
+		iM.setLore(lore);
 		i.setItemMeta(iM);
-		return null;
+		return i;
 	}	
 }
