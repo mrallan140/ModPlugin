@@ -13,6 +13,7 @@ public class Commands implements CommandExecutor {
 			Player p = (Player)sender;
 			if(command.getName().equalsIgnoreCase("modgui")){
 				fr.mrallan140.modplugin.gui.OpenModoGUI(p);
+				return true;
 			}
 		}
 		return false;
