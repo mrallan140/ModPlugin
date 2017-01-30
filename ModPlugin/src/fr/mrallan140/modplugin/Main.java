@@ -8,7 +8,8 @@ public class Main extends JavaPlugin {
     public void onEnable(){
         getCommand("modgui").setExecutor(new Commands());	
     	Bukkit.getPluginManager().registerEvents(new gui(), this);
-    	
+    	getConfig().options().copyDefaults(true);
+    	saveConfig();
     	System.out.println("Plugin Moderation ON !");
         
     }
