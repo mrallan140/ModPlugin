@@ -25,7 +25,7 @@
     </properties>
     
     <build>
-        <sourceDirectory>ModPlugin/src</sourceDirectory>
+        <sourceDirectory>src</sourceDirectory>
         <resources>
             <resource>
                 <directory>ModPlugin/src</directory>
