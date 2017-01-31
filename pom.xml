@@ -25,13 +25,13 @@
     </properties>
     
     <build>
-        <sourceDirectory>src</sourceDirectory>
+        <sourceDirectory>ModPlugin/src</sourceDirectory>
         <resources>
             <resource>
-                <filtering>true</filtering>
-                <directory>src</directory>
+                <directory>ModPlugin/src</directory>
                 <includes>
                     <include>plugin.yml</include>
+                    <include>config.yml</include>
                 </includes>
             </resource>
         </resources>
