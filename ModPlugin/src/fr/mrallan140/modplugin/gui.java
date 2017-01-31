@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.Effect;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -15,8 +14,6 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.potion.Potion;
-import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionType;
 
 
@@ -41,14 +38,12 @@ public class gui implements Listener {
 			if (e.getCurrentItem().equals(spectator)) {
 				Player p = (Player) e.getWhoClicked();
 				p.setGameMode(GameMode.SPECTATOR);
-				p.closeInventory();
-				OpenModoGUI(p);
+				Replaceitem(e.getCurrentItem(), e.getInventory(), 13, adventure);
 			}
 			if (e.getCurrentItem().equals(adventure)) {
 				Player p = (Player) e.getWhoClicked();
 				p.setGameMode(GameMode.ADVENTURE);
-				p.closeInventory();
-				OpenModoGUI(p);
+				Replaceitem(e.getCurrentItem(), e.getInventory(), 13, spectator);
 			}
 			
 			
@@ -93,7 +88,7 @@ public class gui implements Listener {
 					p.sendMessage("deja invisible");
 				} else {
 					p.sendMessage("tu est maintentant INVISIBLE");
-					p.addPotionEffect(PotionEffect);
+					//p.addPotionEffect(PotionEffect);
 				}
 			}
 			
@@ -107,10 +102,13 @@ public class gui implements Listener {
 		}
 	}
 	
-	private void ChangeitemName(ItemStack i, Inventory inv, int index,String Name) {
-		ItemMeta iM = i.getItemMeta();
-		iM.setDisplayName(Name);
-		i.setItemMeta(iM);
+	private void Replaceitem(ItemStack i, Inventory inv, int index,ItemStack i2) {
+		i.setAmount(i2.getAmount());
+		i.setDurability(i2.getDurability());
+		i.setData(i2.getData());
+		i.setItemMeta(i2.getItemMeta());
+		i.setType(i2.getType());
+		i.addEnchantments(i2.getEnchantments());
 		inv.setItem(index, i);
 	}
 

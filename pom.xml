@@ -28,10 +28,10 @@
         <sourceDirectory>src</sourceDirectory>
         <resources>
             <resource>
-                <directory>ModPlugin/src/</directory>
+                <filtering>true</filtering>
+                <directory>src</directory>
                 <includes>
                     <include>plugin.yml</include>
-                    <include>config.yml</include>
                 </includes>
             </resource>
         </resources>
@@ -48,4 +48,6 @@
             </plugin>
         </plugins>
     </build>
+    
+    
 </project>
